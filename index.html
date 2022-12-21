@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width", initial-scale=1.0>
+	<meta charset="utf-8">
+	<title>kiki's</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="pic/logo.png"></a>
+		<ul class="navigation">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="future.html">Journey</a></li>
+			<li><a href="kiki.html">Kiki's</a></li>
+		</ul>
+		<div class="search">
+			<input type="text" placeholder="Search">
+		</div>
+	</header>
+	<div class="banner">
+		<img src="pic/bg.png" class="bg">
+		<div class="content">
+			<img src="pic/name.png" class="movieTitle">
+			<h4>
+				<span>1989</span>
+				<span><i>7+</i></span>
+				<span>1h 43min</span>
+				<span>Family</span>
+			</h4>
+			<p>In this anime feature, 13-year-old Kiki moves to a seaside town with her talking cat, Jiji, to spend a year alone, in accordance with her village's tradition for witches in training. After learning to control her broomstick, Kiki sets up a flying courier service and soon becomes a fixture in the community. But when the insecure young witch begins questioning herself and loses her magic abilities, she must overcome her self-doubt to get her powers back.</p>
+		</div>
+		<a class="play" onclick="toggleVideo();"><img src="pic/play.png">Watch Trailer</a>
+	</div>
+
+	<div class="trailer">
+		<video src="trailer.mp4" controls="true" autoplay="true"></video>
+		<img src="pic/close.png" class="close" onclick="toggleVideo();">
+	</div>
+
+	<script>
+		function toggleVideo()
+		{
+			const trailer = document.querySelector('.trailer');
+			const video = document.querySelector('video');
+			trailer.classList.toggle('active')
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+
+</body>
+</html>
